@@ -10,11 +10,11 @@ public class TopTrumpService {
         Card winnerCard;
         if (card1.getCardValue() > card2.getCardValue() ) {
             winnerCard = card1;
+        } else if (card1.getCardValue() == card2.getCardValue()) {
+            return "Draw!";
         } else {
             winnerCard = card2;
         }
         return winnerCard.getRank().name() + " of " + winnerCard.getSuit().name() + " wins!";
     }
-
-
 }
